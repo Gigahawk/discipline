@@ -1,8 +1,8 @@
-(module "logos:TOPY 4MM MASK" (layer F.Cu) (tedit 0)
-  (fp_text reference "G***" (at 0 0) (layer F.SilkS) hide
+(module "TOPY 4MM MASK" (layer F.Cu) (tedit 5F26745D)
+  (fp_text reference G*** (at 0 0) (layer F.SilkS) hide
     (effects (font (size 1.524 1.524) (thickness 0.3)))
   )
-  (fp_text value "LOGO" (at 0.75 0) (layer F.SilkS) hide
+  (fp_text value LOGO (at 0.75 0) (layer F.SilkS) hide
     (effects (font (size 1.524 1.524) (thickness 0.3)))
   )
   (fp_poly (pts (xy 0.220134 -1.320919) (xy 0.789517 -1.318742) (xy 1.3589 -1.316566) (xy 1.3589 -0.910166)

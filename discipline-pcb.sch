@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -635,5 +635,11 @@ S 10600 6950 1850 450
 U 5F37C842
 F0 "matrix" 50
 F1 "matrix.sch" 50
+$EndSheet
+$Sheet
+S 10600 7850 1850 400 
+U 62088CFF
+F0 "misc" 50
+F1 "misc.sch" 50
 $EndSheet
 $EndSCHEMATC
