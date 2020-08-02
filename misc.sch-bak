@@ -149,4 +149,28 @@ F 3 "~" H 3700 3800 50  0001 C CNN
 	1    3700 3800
 	1    0    0    -1  
 $EndComp
+Text Notes 1325 4375 0    157  ~ 31
+LOGOS
+$Comp
+L Mechanical:MountingHole TOPY1
+U 1 1 6209BF67
+P 1650 4800
+F 0 "TOPY1" H 1750 4800 50  0000 L CNN
+F 1 "MountingHole" H 1750 4755 50  0001 L CNN
+F 2 "cftkb:TOPY 4MM MASK" H 1650 4800 50  0001 C CNN
+F 3 "~" H 1650 4800 50  0001 C CNN
+	1    1650 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole TOPY2
+U 1 1 6209BF79
+P 1650 5100
+F 0 "TOPY2" H 1750 5100 50  0000 L CNN
+F 1 "MountingHole" H 1750 5055 50  0001 L CNN
+F 2 "cftkb:TOPY 4MM MASK" H 1650 5100 50  0001 C CNN
+F 3 "~" H 1650 5100 50  0001 C CNN
+	1    1650 5100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
