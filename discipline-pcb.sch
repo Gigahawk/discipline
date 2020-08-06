@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -204,96 +204,27 @@ F 3 "" H 6900 7400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0105
-U 1 1 5D2F7246
-P 6450 7000
-F 0 "#PWR0105" H 6450 6850 50  0001 C CNN
-F 1 "VCC" H 6467 7173 50  0000 C CNN
-F 2 "" H 6450 7000 50  0001 C CNN
-F 3 "" H 6450 7000 50  0001 C CNN
-	1    6450 7000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Polyfuse_Small F1
 U 1 1 5D2F73B7
-P 6650 6900
-F 0 "F1" H 6718 6946 50  0000 L CNN
-F 1 "500mA" H 6718 6855 50  0000 L CNN
-F 2 "cftkb:polyfuse_5.1mm" H 6700 6700 50  0001 L CNN
-F 3 "~" H 6650 6900 50  0001 C CNN
-	1    6650 6900
-	1    0    0    -1  
+P 6400 7000
+F 0 "F1" V 6600 7000 50  0000 L CNN
+F 1 "500mA" V 6500 6850 50  0000 L CNN
+F 2 "cftkb:polyfuse_5.1mm" H 6450 6800 50  0001 L CNN
+F 3 "~" H 6400 7000 50  0001 C CNN
+	1    6400 7000
+	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+5V #PWR0110
 U 1 1 5D31262D
-P 6650 6800
-F 0 "#PWR0110" H 6650 6890 20  0001 C CNN
-F 1 "+5V" H 6646 6928 30  0000 C CNN
-F 2 "" H 6650 6800 60  0000 C CNN
-F 3 "" H 6650 6800 60  0000 C CNN
-	1    6650 6800
-	1    0    0    -1  
+P 1800 3350
+F 0 "#PWR0110" H 1800 3440 20  0001 C CNN
+F 1 "+5V" H 1796 3478 30  0000 C CNN
+F 2 "" H 1800 3350 60  0000 C CNN
+F 3 "" H 1800 3350 60  0000 C CNN
+	1    1800 3350
+	0    1    1    0   
 $EndComp
-$Comp
-L Device:CP1_Small C3
-U 1 1 5D175B8C
-P 5500 9675
-F 0 "C3" H 5450 9825 50  0000 L CNN
-F 1 "4.7u" H 5400 9525 50  0000 L CNN
-F 2 "cftkb:CP_Radial_D4.0mm_P1.50mm" H 5500 9675 50  0001 C CNN
-F 3 "~" H 5500 9675 50  0001 C CNN
-	1    5500 9675
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C4
-U 1 1 5D176D89
-P 5650 9675
-F 0 "C4" H 5600 9825 50  0000 L CNN
-F 1 "0.1u" H 5600 9525 50  0000 L CNN
-F 2 "cftkb:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 5650 9675 50  0001 C CNN
-F 3 "~" H 5650 9675 50  0001 C CNN
-	1    5650 9675
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C5
-U 1 1 5D176ED3
-P 5800 9675
-F 0 "C5" H 5750 9825 50  0000 L CNN
-F 1 "0.1u" H 5800 9525 50  0000 L CNN
-F 2 "cftkb:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 5800 9675 50  0001 C CNN
-F 3 "~" H 5800 9675 50  0001 C CNN
-	1    5800 9675
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 9575 5650 9575
-Connection ~ 5650 9575
-Wire Wire Line
-	5650 9575 5800 9575
-$Comp
-L power:+5V #PWR0111
-U 1 1 5D193DAD
-P 5650 9475
-F 0 "#PWR0111" H 5650 9565 20  0001 C CNN
-F 1 "+5V" H 5646 9603 30  0000 C CNN
-F 2 "" H 5650 9475 60  0000 C CNN
-F 3 "" H 5650 9475 60  0000 C CNN
-	1    5650 9475
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 9575 5650 9475
-Wire Wire Line
-	5500 9775 5650 9775
-Connection ~ 5650 9775
-Wire Wire Line
-	5650 9775 5800 9775
-Wire Wire Line
-	5650 9775 5650 9875
 $Comp
 L power:+5V #PWR0108
 U 1 1 5D23F01D
@@ -499,17 +430,6 @@ NoConn ~ 4575 9500
 NoConn ~ 4575 9700
 NoConn ~ 4575 9800
 $Comp
-L power:GND #PWR0112
-U 1 1 5DA49277
-P 5650 9875
-F 0 "#PWR0112" H 5650 9625 50  0001 C CNN
-F 1 "GND" H 5655 9702 50  0000 C CNN
-F 2 "" H 5650 9875 50  0001 C CNN
-F 3 "" H 5650 9875 50  0001 C CNN
-	1    5650 9875
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCU_Microchip_ATmega:ATmega32A-PU U1
 U 1 1 5DF0B623
 P 3975 8700
@@ -527,8 +447,6 @@ Text Notes 6050 6550 0    157  ~ 31
 USB
 Text Notes 8350 6575 0    157  ~ 31
 ISP
-Text Notes 5275 9250 0    157  ~ 31
-POWER
 Text Notes 6600 9250 0    157  ~ 31
 RESET
 Text Notes 7975 9275 0    157  ~ 31
@@ -567,11 +485,6 @@ F 3 " ~" H 7225 6750 50  0001 C CNN
 	1    8500 7300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6300 7000 6450 7000
-Wire Wire Line
-	6450 7000 6650 7000
-Connection ~ 6450 7000
 Wire Wire Line
 	5400 8500 5700 8500
 Connection ~ 5700 8500
@@ -642,4 +555,121 @@ U 62088CFF
 F0 "misc" 50
 F1 "misc.sch" 50
 $EndSheet
+$Comp
+L gigahawk:SSD1306_I2C_MODULE A2
+U 1 1 5F28E9FA
+P 4050 3300
+F 0 "A2" H 4617 3135 50  0000 C CNN
+F 1 "SSD1306_I2C_MODULE" H 4617 3226 50  0000 C CNN
+F 2 "Gigahawk:SSD1306_MODULE_128x32" H 4650 3750 50  0001 C CNN
+F 3 "" H 4100 3450 50  0001 C CNN
+	1    4050 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L gigahawk:BLUEFRUIT_SPI_FRIEND A1
+U 1 1 5F29009B
+P 1350 3750
+F 0 "A1" H 1408 4375 50  0000 C CNN
+F 1 "BLUEFRUIT_SPI_FRIEND" H 1408 4284 50  0000 C CNN
+F 2 "Gigahawk:BLUEFRUIT_SPI_FRIEND" H 700 4150 50  0001 C CNN
+F 3 "" H 700 4150 50  0001 C CNN
+	1    1350 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 6500 7000 2    50   Input ~ 0
+VUSB
+$Sheet
+S 10600 6300 1850 300 
+U 5F36D657
+F0 "power" 50
+F1 "power.sch" 50
+$EndSheet
+Text Notes 1250 2900 0    157  ~ 31
+BLE
+Wire Wire Line
+	1700 3350 1800 3350
+Text GLabel 1800 3650 2    50   Input ~ 0
+MOSI
+Text GLabel 1800 3550 2    50   Input ~ 0
+MISO
+Text GLabel 1800 3450 2    50   Input ~ 0
+SCK
+Text GLabel 1800 3750 2    50   Input ~ 0
+BLE_CS
+Text GLabel 1800 3850 2    50   Input ~ 0
+BLE_IRQ
+Text GLabel 1800 3950 2    50   Input ~ 0
+BLE_DFU
+Text GLabel 1800 4050 2    50   Input ~ 0
+BLE_RST
+$Comp
+L power:GND #PWR?
+U 1 1 5F37DA59
+P 1800 4150
+F 0 "#PWR?" H 1800 3900 50  0001 C CNN
+F 1 "GND" V 1800 3950 50  0000 C CNN
+F 2 "" H 1800 4150 50  0001 C CNN
+F 3 "" H 1800 4150 50  0001 C CNN
+	1    1800 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1700 4150 1800 4150
+Wire Wire Line
+	1700 4050 1800 4050
+Wire Wire Line
+	1700 3950 1800 3950
+Wire Wire Line
+	1700 3850 1800 3850
+Wire Wire Line
+	1700 3750 1800 3750
+Wire Wire Line
+	1700 3650 1800 3650
+Wire Wire Line
+	1700 3550 1800 3550
+Wire Wire Line
+	1700 3450 1800 3450
+Text Notes 3200 2850 0    157  ~ 31
+OLED
+$Comp
+L power:GND #PWR?
+U 1 1 5F38423A
+P 4250 3350
+F 0 "#PWR?" H 4250 3100 50  0001 C CNN
+F 1 "GND" H 4255 3177 50  0000 C CNN
+F 2 "" H 4250 3350 50  0001 C CNN
+F 3 "" H 4250 3350 50  0001 C CNN
+	1    4250 3350
+	0    -1   -1   0   
+$EndComp
+Text Notes 1050 4350 0    50   ~ 0
+Module is 5V tolerant\n
+Text Notes 2800 3950 0    50   ~ 0
+Module is 5V tolerant
+Wire Wire Line
+	4150 3350 4250 3350
+$Comp
+L power:+5V #PWR?
+U 1 1 5F385D89
+P 4250 3450
+F 0 "#PWR?" H 4250 3540 20  0001 C CNN
+F 1 "+5V" H 4246 3578 30  0000 C CNN
+F 2 "" H 4250 3450 60  0000 C CNN
+F 3 "" H 4250 3450 60  0000 C CNN
+	1    4250 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 3450 4250 3450
+Text GLabel 4250 3550 2    50   Input ~ 0
+SCL
+Text GLabel 4250 3650 2    50   Input ~ 0
+SDA
+Wire Wire Line
+	4150 3550 4250 3550
+Wire Wire Line
+	4150 3650 4250 3650
+Text Notes 2800 3850 0    50   ~ 0
+I2C Address 0x3C
 $EndSCHEMATC
