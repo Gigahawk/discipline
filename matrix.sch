@@ -1830,10 +1830,6 @@ Wire Wire Line
 Connection ~ 12000 3850
 Wire Wire Line
 	12000 3850 12700 3850
-Text Label 2850 3300 0    50   ~ 0
-row0
-Text Label 2850 3850 0    50   ~ 0
-row1
 Wire Wire Line
 	2900 4450 3600 4450
 Connection ~ 3600 4450
@@ -1921,29 +1917,21 @@ Wire Wire Line
 Wire Wire Line
 	2850 4450 2900 4450
 Connection ~ 2900 4450
-Text Label 2850 4450 0    50   ~ 0
-row2
 Wire Wire Line
 	2850 5050 2900 5050
 Connection ~ 2900 5050
-Text Label 2850 5050 0    50   ~ 0
-row3
 Wire Wire Line
 	2850 5600 2900 5600
 Connection ~ 3600 5600
 Connection ~ 2900 5600
 Wire Wire Line
 	2900 5600 3600 5600
-Text Label 2850 5600 0    50   ~ 0
-row4
 Text Label 3900 3100 0    50   ~ 0
 col0
 Text Label 4250 3000 3    50   ~ 0
 col1
 Text Label 3550 3000 3    50   ~ 0
 col0
-Text Label 4700 3200 3    50   ~ 0
-col2
 Text Label 4950 3050 3    50   ~ 0
 col2
 Text Label 5650 3050 3    50   ~ 0
@@ -1970,17 +1958,17 @@ Text Label 12650 3000 3    50   ~ 0
 col13
 Text Label 13350 3050 3    50   ~ 0
 col14
-Text GLabel 2850 3300 0    50   Input ~ 0
+Text GLabel 2850 2700 0    50   Input ~ 0
 row0
-Text GLabel 2850 3850 0    50   Input ~ 0
+Text GLabel 2850 3300 0    50   Input ~ 0
 row1
-Text GLabel 2850 4450 0    50   Input ~ 0
+Text GLabel 2850 3850 0    50   Input ~ 0
 row2
-Text GLabel 2850 5050 0    50   Input ~ 0
+Text GLabel 2850 4450 0    50   Input ~ 0
 row3
-Text GLabel 2850 5600 0    50   Input ~ 0
+Text GLabel 2850 5050 0    50   Input ~ 0
 row4
-Text GLabel 3550 2900 1    50   Input ~ 0
+Text GLabel 3550 2350 1    50   Input ~ 0
 col0
 Text GLabel 4250 2900 1    50   Input ~ 0
 col1
@@ -2059,8 +2047,6 @@ Connection ~ 10600 5600
 Connection ~ 11300 5600
 Text Notes 15550 11050 2    50   ~ 0
 1.1
-Wire Wire Line
-	3550 2900 3550 2950
 Connection ~ 3550 2950
 Wire Wire Line
 	3550 2950 3550 3500
@@ -2237,9 +2223,6 @@ Wire Wire Line
 Connection ~ 13350 4700
 Wire Wire Line
 	13350 4700 13350 5250
-Wire Wire Line
-	12050 4200 12050 4100
-Connection ~ 12050 4100
 $Comp
 L keyboard_parts:KEYSW SW1
 U 2 1 5F2A7066
@@ -3735,4 +3718,121 @@ Wire Wire Line
 	2950 8550 3850 8550
 Wire Wire Line
 	3100 8400 3100 9700
+$Comp
+L Device:Rotary_Encoder_Switch SW69
+U 1 1 5F364C90
+P 3150 2050
+F 0 "SW69" V 3000 1600 50  0000 L CNN
+F 1 "Rotary_Encoder_Switch" V 2900 2250 50  0000 L CNN
+F 2 "Gigahawk:482016514001" H 3000 2210 50  0001 C CNN
+F 3 "~" H 3150 2310 50  0001 C CNN
+	1    3150 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F418DFD
+P 3150 1750
+AR Path="/5F418DFD" Ref="#PWR?"  Part="1" 
+AR Path="/5F37C842/5F418DFD" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 3150 1500 50  0001 C CNN
+F 1 "GND" H 3155 1577 50  0000 C CNN
+F 2 "" H 3150 1750 50  0001 C CNN
+F 3 "" H 3150 1750 50  0001 C CNN
+	1    3150 1750
+	-1   0    0    1   
+$EndComp
+Text GLabel 3300 1650 2    50   Input ~ 0
+ENC_A
+Text GLabel 3000 1650 0    50   Input ~ 0
+ENC_B
+Wire Wire Line
+	3250 1750 3250 1650
+Wire Wire Line
+	3250 1650 3300 1650
+Wire Wire Line
+	3050 1750 3050 1650
+Wire Wire Line
+	3050 1650 3000 1650
+$Comp
+L Device:D D71
+U 1 1 5F5DE18A
+P 2900 2550
+F 0 "D71" V 2946 2471 50  0000 R CNN
+F 1 " " V 2855 2471 50  0000 R CNN
+F 2 "keyboard_parts:D_SOD123_axial" H 2900 2550 50  0001 C CNN
+F 3 "~" H 2900 2550 50  0001 C CNN
+	1    2900 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2900 2400 2900 2350
+Wire Wire Line
+	2900 2350 3050 2350
+Text GLabel 2850 5600 0    50   Input ~ 0
+row5
+Wire Wire Line
+	3250 2350 3550 2350
+Wire Wire Line
+	3550 2350 3550 2950
+Wire Wire Line
+	2900 2700 2850 2700
+$Comp
+L Device:R_Small R?
+U 1 1 5FA0E8A0
+P 3250 1450
+AR Path="/5FA0E8A0" Ref="R?"  Part="1" 
+AR Path="/5F37C842/5FA0E8A0" Ref="R15"  Part="1" 
+F 0 "R15" V 3150 1450 50  0000 C CNN
+F 1 "10k" V 3250 1450 39  0000 C CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 3250 1450 50  0001 C CNN
+F 3 "~" H 3250 1450 50  0001 C CNN
+	1    3250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5FA0E8A6
+P 3050 1450
+AR Path="/5FA0E8A6" Ref="R?"  Part="1" 
+AR Path="/5F37C842/5FA0E8A6" Ref="R14"  Part="1" 
+F 0 "R14" V 2950 1450 50  0000 C CNN
+F 1 "10k" V 3050 1450 39  0000 C CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" H 3050 1450 50  0001 C CNN
+F 3 "~" H 3050 1450 50  0001 C CNN
+	1    3050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FA6C502
+P 3050 1350
+AR Path="/5FA6C502" Ref="#PWR?"  Part="1" 
+AR Path="/5F37C842/5FA6C502" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 3050 1440 20  0001 C CNN
+F 1 "+5V" H 3046 1478 30  0000 C CNN
+F 2 "" H 3050 1350 60  0000 C CNN
+F 3 "" H 3050 1350 60  0000 C CNN
+	1    3050 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 3050 1650
+$Comp
+L power:+5V #PWR?
+U 1 1 5FBD86D1
+P 3250 1350
+AR Path="/5FBD86D1" Ref="#PWR?"  Part="1" 
+AR Path="/5F37C842/5FBD86D1" Ref="#PWR0120"  Part="1" 
+F 0 "#PWR0120" H 3250 1440 20  0001 C CNN
+F 1 "+5V" H 3246 1478 30  0000 C CNN
+F 2 "" H 3250 1350 60  0000 C CNN
+F 3 "" H 3250 1350 60  0000 C CNN
+	1    3250 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1550 3050 1650
+Wire Wire Line
+	3250 1550 3250 1650
+Connection ~ 3250 1650
 $EndSCHEMATC
